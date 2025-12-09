@@ -15,6 +15,7 @@ public:
             return;
         }
         for(int i=idx;i<candidates.size();i++){
+            if (i > idx && candidates[i] == candidates[i-1]) continue;
             temp.push_back(candidates[i]);
             solve(i, target-candidates[i], candidates, temp, ans);
             temp.pop_back();
