@@ -1,6 +1,13 @@
 class Solution {
 public:
     char findKthBit(int n, int k) {
+        int z=1;
+        for(int i=1;i<k;i++){
+            if(z>k){
+                n=z/2-1;
+                break;
+            }
+        }
         string result=find(n-1);
         cout<< result;
         return result[k-1];
